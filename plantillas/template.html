@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer plantilla</title>
+</head>
+<body>
+    <h1>Esta es nuestra gran primera plantilla HTML</h1>
+    <p>Este es el contenido de mi párrafo</p>
+
+    <p style="color:red">Nombre: {{nombre}}</p>
+    <p style="color:green">Apellido: {{apellido}}</p>
+    <p>Edad: {{edad}}</p>
+
+    <h3>Lista de notas</h3>
+
+    {% for nota in lista_de_notas %}
+
+        {% if nota >= 6 %}
+        <p style="color:green">Nota aprobada: {{ nota }} </p>
+        {% else %}
+        <p style="color:red">Nota reprobada: {{ nota }}</p>
+        {% endif %}
+
+    {% endfor %}
+</body>
+</html>
